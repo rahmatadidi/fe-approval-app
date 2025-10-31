@@ -42,12 +42,19 @@ Dibangun dengan **React + TS**, **Vite**, **Tailwind**, **Zustand**, dan **Axios
 ## 📂 Folder Structure
 
 src/
+
 ├─ api/ # axios + API services
+
 ├─ components/ # UI components
+
 ├─ hooks/ # custom hooks (useLeaves, useAuth)
+
 ├─ stores/ # Zustand stores
+
 ├─ pages/ # Route pages (Login, Leave List, Approval List)
+
 ├─ types/ # TS interfaces
+
 └─ utils/ # Helpers & interceptors
 
 
