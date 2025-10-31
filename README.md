@@ -1,73 +1,100 @@
-# React + TypeScript + Vite
+# Approval App Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="left">
+  <img src="https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Zustand-000?logo=react&logoColor=white" />
+</p>
 
-Currently, two official plugins are available:
+Frontend aplikasi manajemen cuti role **Employee**, **Head**, dan **GM**.  
+Dibangun dengan **React + TS**, **Vite**, **Tailwind**, **Zustand**, dan **Axios**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Login Authentication (JWT)
+- Submit Leave
+- View Leave List + Pagination
+- Approve / Reject Leave (Head & GM)
+- Leave History Tracking
+- Role-Based Pages
+- Responsive UI (TailwindCSS)
+- State management with Zustand
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Tech | Description|
+|---|---|
+| React + Vite | Frontend framework |
+| TypeScript | Strong typing |
+| TailwindCSS | UI styling |
+| Zustand | State management |
+| Axios | HTTP client |
+| React Router Dom | Routing |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Folder Structure
+
+src/
+├─ api/ # axios + API services
+├─ components/ # UI components
+├─ hooks/ # custom hooks (useLeaves, useAuth)
+├─ stores/ # Zustand stores
+├─ pages/ # Route pages (Login, Leave List, Approval List)
+├─ types/ # TS interfaces
+└─ utils/ # Helpers & interceptors
+
+
+---
+
+## ⚙️ Setup Project
+
+### 1️⃣ Clone project
+
+```bash
+git clone https://github.com/rahmatadidi/fe-approval-app.git
+cd fe-approval-app
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**Install dependencies**
+```bash
+npm install
 ```
+
+***Jalankan Project***
+```bash
+npm run dev
+```
+
+🔒 Authentication Flow
+
+Login → store token in state/localStorage
+
+Axios interceptor attaches Bearer token
+
+Protected routes for Head & GM
+
+📝 Notes
+
+Pastikan backend sudah running
+
+Sesuaikan .env dengan URL backend
+
+JWT disimpan & dikirim via Authorization Header
+
+🎯 Future Improvements
+
+Refresh Token
+
+
+
+
+
+
