@@ -30,7 +30,7 @@ Dibangun dengan **React + TS**, **Vite**, **Tailwind**, **Zustand**, dan **Axios
 
 | Tech | Description|
 |---|---|
-| React + Vite | Frontend framework |
+| React + Vite | Frontend Library |
 | TypeScript | Strong typing |
 | TailwindCSS | UI styling |
 | Zustand | State management |
